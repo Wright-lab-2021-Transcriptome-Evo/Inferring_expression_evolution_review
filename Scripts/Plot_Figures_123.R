@@ -20,7 +20,7 @@ ak_wt <- function(x){
 
 
 #### ERROR RATE ----
-error_data <- do.call(rbind,lapply(Sys.glob("data/final_figure_data/error_rate/*"),read.csv))
+error_data <- do.call(rbind,lapply(Sys.glob("data/final_figure_data/error_rate_S23/*"),read.csv))
 error_data$OUtop <- error_data$OU_wt > error_data$BM_wt | error_data$BS_wt > error_data$BM_wt
 error_data$OUsig <- (error_data$OU_AICc - error_data$BM_AICc) < -2 | ((error_data$BS_AICc - error_data$BM_AICc) < -2)
 test1_error_rate_25 <- mean(error_data$OUtop[error_data$b == 25])
