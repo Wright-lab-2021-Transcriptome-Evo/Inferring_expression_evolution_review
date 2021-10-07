@@ -5,10 +5,15 @@ R scripts and data for the simulating and plotting of gene expression evolution 
 
   
 *phytools
+
 geiger
+
 phylolm
+
 OUwie
+
 tidyr
+
 dplyr*
   
                                                                              
