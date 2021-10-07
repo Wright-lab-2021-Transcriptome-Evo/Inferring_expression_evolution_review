@@ -4,16 +4,11 @@
 R scripts and data for the simulating and plotting of gene expression evolution experiments. See the full manuscript for a description of each simulation scenario. All simulations were run in R v.4.1.1 using the following packages:
 
   
-*phytools
-
-geiger
-
-phylolm
-
-OUwie
-
-tidyr
-
+*phytools<br/>
+geiger<br/>
+phylolm<br/>
+OUwie<br/>
+tidyr<br/>
 dplyr*
   
                                                                              
