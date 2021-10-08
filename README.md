@@ -22,7 +22,7 @@ dplyr
 
 ## General Overview
 
-![alt text](/read_me/Simulation_overview.png?raw=true)
+![alt text](/read_me/Simulation_overview.png?raw=true | width = 100) 
 
   
 
