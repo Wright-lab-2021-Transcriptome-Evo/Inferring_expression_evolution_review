@@ -22,7 +22,7 @@ dplyr
 
 ## General Overview
 
-![alt text](https://https://github.com/Wright-lab-2021-Transcriptome-Evo/Inferring_expression_evolution_review/tree/main/read_me/Simulation_overview.png?raw=true)
+![alt text](/read_me/Simulation_overview.png?raw=true)
 
   
 
