@@ -22,7 +22,7 @@ dplyr
 
 ## General Overview
 
-<img src="read_me/Simulation_overview.png" align="right">
+<img src="read_me/Simulation_overview.png" align="right" width="100">
   
 
 In brief, three gene expression scenarios are laid out to explore the effects of tissue composition differences on the inference of selection when applying phylogenetic comparative methods. The scenarios use a hypothetical tissue, composed of two distinct cell types. Bulk RNAseq is then generated for the entire tissue and the expression value recorded is a function of the relative abundance of each cell type and its expression value.
