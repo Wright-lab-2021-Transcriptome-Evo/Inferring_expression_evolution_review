@@ -6,6 +6,7 @@
 
 R scripts and data for the simulation and plotting of gene expression evolution scenarios. See the full manuscript for a description of each simulation scenario.
 
+Go to [file descriptions](file_desription.md) for description of individual scripts
   
 
 All simulations were run in R v.4.1.1 using the following packages:
@@ -22,7 +23,7 @@ dplyr
 
 ## General Overview
 
-<img src="dir/images/Simulation_overview.png" width="500">
+<img src="read_me/Simulation_overview.png" width="500">
   
 
 In brief, three gene expression scenarios are laid out to explore the effects of tissue composition differences on the inference of selection when applying phylogenetic comparative methods. The scenarios use a hypothetical tissue, composed of two distinct cell types. Bulk RNAseq is then generated for the entire tissue and the expression value recorded is a function of the relative abundance of each cell type and its expression value.
@@ -96,3 +97,4 @@ exp<sub>i</sub> = (pr<sub>i</sub> x exp<sub>Ai</sub>) + ((1-pr<sub>i</sub>) x ex
 **Model fitting**
 
 The same models were fit as in scenario ii, however, the tip that was allowed an alternate optimum was randomly allocated. The choice to not allow n branch shift models, where n = number of tips, was due to a branch shift model always being selected, even in single-cell Brownian simulations.
+
