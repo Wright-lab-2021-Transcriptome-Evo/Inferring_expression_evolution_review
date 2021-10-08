@@ -13,9 +13,12 @@ ak_wt <- function(x){
 data <- data.frame(exp_value = as.numeric(), b = as.numeric(), sim= numeric(),
                    Static_exp = numeric())
 
+args <- commandArgs(trailingOnly = TRUE)
+r <- as.numeric(args[1])
+
 c=0
 for (b in c(25, 100)){
-   for (r in 1:1000){
+   for (r in 1:50){
       tree <- sim.bdtree(stop = "taxa", n = b)
       c=c+1
       for (e in c(1,2)){
@@ -41,7 +44,7 @@ for (b in c(25, 100)){
 }
 
 
-###write.csv(data, file = "data/final_figure_data/S1_error.csv", row.names = F)
+write.csv(data, paste("data/", r, "_S1_error_rate.csv", sep = ""), row.names = F )
 
 
 

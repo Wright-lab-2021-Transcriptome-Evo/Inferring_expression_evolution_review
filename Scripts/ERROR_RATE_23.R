@@ -1,5 +1,6 @@
 library(OUwie)
 library(phytools)
+
 ak_wt <- function(x){
    dak <- x - min(x)
    rl <- sapply(dak, function(y)(exp(-0.5*y)))
@@ -41,4 +42,4 @@ for (b in c(25, 100)){
 }
 
 
-write.csv(data, paste(r, "error_rate.csv", sep = "_"), row.names = F )
+write.csv(data, paste("data/", r, "_S23_error_rate.csv", sep = ""), row.names = F )

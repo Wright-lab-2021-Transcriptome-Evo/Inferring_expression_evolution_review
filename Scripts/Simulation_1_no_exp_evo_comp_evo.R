@@ -1,6 +1,3 @@
-install.packages("geiger")
-install.packages("phylolm")
-
 library(geiger)
 library(phylolm)
 library(dplyr)
@@ -60,5 +57,5 @@ for (b in c(25, 100)){
 }
 
 
-###write.csv(data, file = "data/final_figure_data/Simulation_1_static_expression_comp_evol.csv", row.names = F)
-##
+write.csv(data, file = "data/Simulation_1_static_expression_comp_evol.csv", row.names = F)
+
