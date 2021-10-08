@@ -51,7 +51,7 @@ tiff("Plots/Sim1_bar.tiff", units="in", width=2, height=2, res=400)
 Bar_1 + theme(legend.position = "none")
 dev.off()
 
-dTree_size_legend <- get_legend(Bar_1)
+Tree_size_legend <- get_legend(Bar_1)
 tiff("Plots/TreeSize_legend.tiff", units="in", width=5, height=5, res=300)
 as_ggplot(Tree_size_legend)
 dev.off()
@@ -74,9 +74,9 @@ sum_data_2 <- total_data_2 %>%
             lambda = mean(lambda),
             n = n())
 sum_data_2$test2[sum_data_2$b == 25] <- 
-  sum_data_2$test2[sum_data_2$b == 25]-test2_error_rate_25
+  sum_data_2$test2[sum_data_2$b == 25]-s23_test2_error_rate_25
 sum_data_2$test2[sum_data_2$b == 100] <- 
-  sum_data_2$test2[sum_data_2$b == 100]-test2_error_rate_100
+  sum_data_2$test2[sum_data_2$b == 100]-s23_test2_error_rate_100
   
 fig_2_line <- ggplot(sum_data_2, aes(x = pr, y = test2, group = b, colour = as.factor(b))) + 
   geom_line() + xlab("Branch specific pr value") + ylab("Relative type 1 error rate") +
@@ -119,8 +119,8 @@ tiff("Plots/Sim2_bar.tiff", units="in", width=2, height=2, res=400)
 bar_2 + theme(legend.position = "none")
 dev.off()
 
-Sim_2_25_T1 <- mean(filter(sum_data_2, (b == 25 & (pr == 0 | pr ==1)))$test2) - test2_error_rate_25
-Sim_2_100_T1 <- mean(filter(sum_data_2, (b == 100 & (pr == 0 | pr ==1)))$test2) - test2_error_rate_100
+Sim_2_25_T1 <- mean(filter(sum_data_2, (b == 25 & (pr == 0 | pr ==1)))$test2) - s23_test2_error_rate_25
+Sim_2_100_T1 <- mean(filter(sum_data_2, (b == 100 & (pr == 0 | pr ==1)))$test2) - s23_test2_error_rate_100
 
 
 
@@ -149,9 +149,9 @@ sum_data3 <- total_data3 %>%
 
 
 sum_data3$test2[sum_data3$b == 25] <- 
-  sum_data3$test2[sum_data3$b == 25]-test2_error_rate_25
+  sum_data3$test2[sum_data3$b == 25]-s23_test2_error_rate_25
 sum_data3$test2[sum_data3$b == 100] <- 
-  sum_data3$test2[sum_data3$b == 100]-test2_error_rate_100
+  sum_data3$test2[sum_data3$b == 100]-s23_test2_error_rate_100
 
 
 
@@ -199,8 +199,8 @@ tiff("Plots/Sim3_bar.tiff", units="in", width=2, height=2, res=400)
 bar_3 + theme(legend.position = "none")
 dev.off()
 
-Sim_3_25_T1 <- mean(filter(sum_data3, (b == 25 & cv == 0  & test == ", composition evolving"))$T1_error) - test2_error_rate_25
-Sim_3_100_T1 <- mean(filter(sum_data3, (b == 100 & cv == 0  & test == ", composition evolving"))$T1_error) - test2_error_rate_100
+Sim_3_25_T1 <- mean(filter(sum_data3, (b == 25 & cv == 0  & test == ", composition evolving"))$T1_error) - s23_test2_error_rate_25
+Sim_3_100_T1 <- mean(filter(sum_data3, (b == 100 & cv == 0  & test == ", composition evolving"))$T1_error) - s23_test2_error_rate_100
 
 
 
